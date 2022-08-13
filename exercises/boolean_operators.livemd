@@ -36,7 +36,7 @@ b[____] --> and
 and --> false
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = nil","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = false","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -45,7 +45,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = false
     assert answer == false
   end
 end
@@ -54,7 +54,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = false
 ```
 
 ```mermaid
@@ -64,7 +64,7 @@ b[____] --> or
 or --> true
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = nil","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = true","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -73,7 +73,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = true
     assert answer == true
   end
 end
@@ -82,7 +82,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = true
 ```
 
 Each blank in the following diagram must be the same value. Either `false` or `true`.
@@ -98,7 +98,7 @@ not --> e
 f --> true
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = nil","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = false","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -107,7 +107,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = false
     assert answer == false
   end
 end
@@ -116,7 +116,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = false
 ```
 
 ```mermaid
@@ -127,7 +127,7 @@ flowchart LR
   c --> true
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = nil","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == false","code":"answer = false","solution":"answer = false"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -136,7 +136,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = false
     assert answer == false
   end
 end
@@ -145,7 +145,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = false
 ```
 
 ```mermaid
@@ -159,7 +159,7 @@ flowchart LR
   c --> d
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = nil","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = true","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -168,7 +168,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = true
     assert answer == true
   end
 end
@@ -177,7 +177,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = true
 ```
 
 ```mermaid
@@ -192,7 +192,7 @@ flowchart LR
   c --> d
 ```
 
-<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = nil","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert answer == true","code":"answer = true","solution":"answer = true"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -201,7 +201,7 @@ defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    answer = nil
+    answer = true
     assert answer == true
   end
 end
@@ -210,7 +210,7 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-answer = nil
+answer = true
 ```
 
 ## Boolean Diagram Forms
