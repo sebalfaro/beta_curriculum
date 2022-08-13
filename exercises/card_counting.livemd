@@ -46,19 +46,18 @@ When the current card is `4` and the current count is `0` what is the `next_coun
 Use arithmetic operators `+` or `-` with the `count` variable to set the `next_count`.  
 Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert next_count === 1","code":"card = 4\r\ncount = 0\r\n\r\nnext_count = nil","solution":"next_count = count + 1"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert next_count === 1","code":"card = 4\r\ncount = 0\r\n\r\nnext_countcount + 1nil","solution":"next_count = count + 1"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     card = 4
-    count = 0
+count = 0
 
-    next_count = nil
+next_countcount + 1nil
     assert next_count === 1
   end
 end
@@ -70,7 +69,8 @@ ExUnit.run()
 card = 4
 count = 0
 
-next_count = nil
+next_countcount + 1nil
+
 ```
 
 ### Card (7)
@@ -79,7 +79,7 @@ When the current card is `7` and the current count is `3` what is the `next_coun
 
 Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert next_count == count","code":"card = 7\r\ncount = 3\r\n\r\nnext_count = nil","solution":"next_count = count"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert next_count == count","code":"card = 7\r\ncount = 3\r\n\r\nnext_countcountnil","solution":"next_count = count"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -91,7 +91,7 @@ defmodule Assertion do
     card = 7
     count = 3
 
-    next_count = nil
+    next_countcountnil
     assert next_count == count
   end
 end
@@ -103,7 +103,7 @@ ExUnit.run()
 card = 7
 count = 3
 
-next_count = nil
+next_countcountnil
 ```
 
 ### Card King (13)
@@ -112,19 +112,18 @@ When the current card is a King `(13)` and the current count is `5` what is the 
 Use arithmetic operators `+` or `-` with the `count` variable to set the `next_count`.  
 Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert next_count === 4","code":"card = 13\r\ncount = 5\r\n\r\nnext_count = nil","solution":"next_count = count - 1"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert next_count === 4","code":"card = 13\r\ncount = 5\r\n\r\nnext_countcount - 1nil","solution":"next_count = count - 1"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     card = 13
-    count = 5
+count = 5
 
-    next_count = nil
+next_countcount - 1nil
     assert next_count === 4
   end
 end
@@ -136,7 +135,8 @@ ExUnit.run()
 card = 13
 count = 5
 
-next_count = nil
+next_countcount - 1nil
+
 ```
 
 ### Random Card And Count (BONUS)
@@ -159,26 +159,27 @@ There are multiple possible solutions. You might consider:
 2. Use control flow such as `cond` or `case`.
 </details>
 
-<!-- livebook:{"attrs":{"assertions":"cond do\n  card in 2..6 -> assert next_count === count + 1\n  card  in 7..9 -> assert next_count === count\n  card in 10..14 -> assert next_count === count - 1\n  true -> raise \"Something went wrong. Please reset the exercise.\"\nend","code":"card = Enum.random(2..14)\r\ncount = Enum.random(1..10)\r\n\r\nnext_count = nil","solution":"next_count = \n  cond do\n    card in 2..6 -> count + 1\n    card in 7..9 -> count\n    card in 10..14 -> count - 1\n  end"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"cond do\n  card in 2..6 -> assert next_count === count + 1\n  card  in 7..9 -> assert next_count === count\n  card in 10..14 -> assert next_count === count - 1\n  true -> raise \"Something went wrong. Please reset the exercise.\"\nend","code":"card = Enum.random(2..14)\r\ncount = Enum.random(1..10)\rnext_count = \n  cond do\n    card in 2..6 -> count + 1\n    card in 7..9 -> count\n    card in 10..14 -> count - 1\n  endnil","solution":"next_count = \n  cond do\n    card in 2..6 -> count + 1\n    card in 7..9 -> count\n    card in 10..14 -> count - 1\n  end"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     card = Enum.random(2..14)
-    count = Enum.random(1..10)
-
-    next_count = nil
-
+count = Enum.random(1..10)next_count = 
+  cond do
+    card in 2..6 -> count + 1
+    card in 7..9 -> count
+    card in 10..14 -> count - 1
+  endnil
     cond do
-      card in 2..6 -> assert next_count === count + 1
-      card in 7..9 -> assert next_count === count
-      card in 10..14 -> assert next_count === count - 1
-      true -> raise "Something went wrong. Please reset the exercise."
-    end
+  card in 2..6 -> assert next_count === count + 1
+  card  in 7..9 -> assert next_count === count
+  card in 10..14 -> assert next_count === count - 1
+  true -> raise "Something went wrong. Please reset the exercise."
+end
   end
 end
 
@@ -187,9 +188,13 @@ ExUnit.run()
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
 card = Enum.random(2..14)
-count = Enum.random(1..10)
+count = Enum.random(1..10)next_count = 
+  cond do
+    card in 2..6 -> count + 1
+    card in 7..9 -> count
+    card in 10..14 -> count - 1
+  endnil
 
-next_count = nil
 ```
 
 ## Commit Your Progress
