@@ -132,7 +132,7 @@ Evaluate the Elixir cell below, then change `5` to `4` to see **Evaluated** chan
 Re-evaluate the cell to see *Evaluated* change to **Evaluated**.
 
 ```elixir
-5
+4
 ```
 
 ## Formatting
