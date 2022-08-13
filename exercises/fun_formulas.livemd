@@ -42,27 +42,25 @@ In the Elixir cell below, calculate the percentage given `completed_items` and `
 
 Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert total_items >= completed_items,\n  \"total_items should always be more than completed items, please reset the exercise\"\n\nassert percentage <= 100,\n  \"percentage should be a float between 0 and 100. Please check the formula entered.\"\n\nassert percentage == completed_items / total_items * 100","code":"completed_items = 10\r\ntotal_items = 100\r\n\r\npercentage = nil","solution":"percentage = completed_items / total_items * 100"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert total_items >= completed_items,\n  \"total_items should always be more than completed items, please reset the exercise\"\n\nassert percentage <= 100,\n  \"percentage should be a float between 0 and 100. Please check the formula entered.\"\n\nassert percentage == completed_items / total_items * 100","code":"completed_items = 10\r\ntotal_items = 100\r\n\r\npercentagecompleted_items / total_items * 100nil","solution":"percentage = completed_items / total_items * 100"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     completed_items = 10
-    total_items = 100
+total_items = 100
 
-    percentage = nil
-
+percentagecompleted_items / total_items * 100nil
     assert total_items >= completed_items,
-           "total_items should always be more than completed items, please reset the exercise"
+  "total_items should always be more than completed items, please reset the exercise"
 
-    assert percentage <= 100,
-           "percentage should be a float between 0 and 100. Please check the formula entered."
+assert percentage <= 100,
+  "percentage should be a float between 0 and 100. Please check the formula entered."
 
-    assert percentage == completed_items / total_items * 100
+assert percentage == completed_items / total_items * 100
   end
 end
 
@@ -73,34 +71,33 @@ ExUnit.run()
 completed_items = 10
 total_items = 100
 
-percentage = nil
+percentagecompleted_items / total_items * 100nil
+
 ```
 
 Given a random number of completed_items and total_items, calculate the percentage.
 
 Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert total_items >= completed_items,\n  \"total_items should always be more than completed items, please reset the exercise\"\n\nassert percentage <= 100,\n  \"percentage should be a float between 0 and 100. Please check the formula entered.\"\n\nassert percentage == completed_items / total_items * 100","code":"completed_items = Utils.random(1..100)\r\ntotal_items = Utils.random(completed_items..100)\r\n\r\npercentage = nil","solution":"percentage = completed_items / total_items * 100"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert total_items >= completed_items,\n  \"total_items should always be more than completed items, please reset the exercise\"\n\nassert percentage <= 100,\n  \"percentage should be a float between 0 and 100. Please check the formula entered.\"\n\nassert percentage == completed_items / total_items * 100","code":"completed_items = Utils.random(1..100)\r\ntotal_items = Utils.random(completed_items..100)\r\n\r\npercentagecompleted_items / total_items * 100nil","solution":"percentage = completed_items / total_items * 100"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     completed_items = Utils.random(1..100)
-    total_items = Utils.random(completed_items..100)
+total_items = Utils.random(completed_items..100)
 
-    percentage = nil
-
+percentagecompleted_items / total_items * 100nil
     assert total_items >= completed_items,
-           "total_items should always be more than completed items, please reset the exercise"
+  "total_items should always be more than completed items, please reset the exercise"
 
-    assert percentage <= 100,
-           "percentage should be a float between 0 and 100. Please check the formula entered."
+assert percentage <= 100,
+  "percentage should be a float between 0 and 100. Please check the formula entered."
 
-    assert percentage == completed_items / total_items * 100
+assert percentage == completed_items / total_items * 100
   end
 end
 
@@ -111,7 +108,8 @@ ExUnit.run()
 completed_items = Utils.random(1..100)
 total_items = Utils.random(completed_items..100)
 
-percentage = nil
+percentagecompleted_items / total_items * 100nil
+
 ```
 
 ## Rocket Ship
@@ -122,7 +120,7 @@ Users can enter the `mass` and `acceleration` of a ship to visualize the `force`
 
 Given that ${mass} * {acceleration} = force$, calculate force. Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert force == 20","code":"mass = 10\r\nacceleration = 2\r\n\r\nforce = nil","solution":"force = mass * acceleration"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert force == 20","code":"mass = 10\r\nacceleration = 2\r\n\r\nforcemass * accelerationnil","solution":"force = mass * acceleration"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
@@ -134,7 +132,7 @@ defmodule Assertion do
     mass = 10
     acceleration = 2
 
-    force = nil
+    forcemass * accelerationnil
     assert force == 20
   end
 end
@@ -146,7 +144,7 @@ ExUnit.run()
 mass = 10
 acceleration = 2
 
-force = nil
+forcemass * accelerationnil
 ```
 
 ## What Do You Tip?
@@ -161,24 +159,23 @@ Then calculate the `tip_amount`.
 
 Replace `nil` with your answers.
 
-<!-- livebook:{"attrs":{"assertions":"assert tip_rate == 0.20, \"tip rate should be 0.2\"\nassert cost_of_the_meal == 55.5, \"cost_of_the_meal should be 55.5\"\n\nassert tip_amount === cost_of_the_meal * tip_rate,\n  \"tip_amount should be cost_of_the_meal * tip_rate\"","code":"cost_of_the_meal = nil\r\ntip_rate = nil\r\n\r\ntip_amount = nil","solution":"cost_of_the_meal = 55.5\ntip_rate = 0.2\n\ntip_amount = cost_of_the_meal * tip_rate"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert tip_rate == 0.20, \"tip rate should be 0.2\"\nassert cost_of_the_meal == 55.5, \"cost_of_the_meal should be 55.5\"\n\nassert tip_amount === cost_of_the_meal * tip_rate,\n  \"tip_amount should be cost_of_the_meal * tip_rate\"","code":"cost_of_the_meal = 55.50\r\ntip_rate =0.2l\r\n\r\ntip_amountcost_of_the_meal * tip_ratenil","solution":"cost_of_the_meal = 55.5\ntip_rate = 0.2\n\ntip_amount = cost_of_the_meal * tip_rate"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
-    cost_of_the_meal = nil
-    tip_rate = nil
+    cost_of_the_meal = 55.50
+tip_rate =0.2l
 
-    tip_amount = nil
+tip_amountcost_of_the_meal * tip_ratenil
     assert tip_rate == 0.20, "tip rate should be 0.2"
-    assert cost_of_the_meal == 55.5, "cost_of_the_meal should be 55.5"
+assert cost_of_the_meal == 55.5, "cost_of_the_meal should be 55.5"
 
-    assert tip_amount === cost_of_the_meal * tip_rate,
-           "tip_amount should be cost_of_the_meal * tip_rate"
+assert tip_amount === cost_of_the_meal * tip_rate,
+  "tip_amount should be cost_of_the_meal * tip_rate"
   end
 end
 
@@ -186,10 +183,11 @@ ExUnit.run()
 
 # Make variables and modules defined in the test available.
 # Also allows for exploration using the output of the cell.
-cost_of_the_meal = nil
-tip_rate = nil
+cost_of_the_meal = 55.50
+tip_rate =0.2l
 
-tip_amount = nil
+tip_amountcost_of_the_meal * tip_ratenil
+
 ```
 
 ## Pythagorean Theorum
@@ -198,22 +196,21 @@ To calculate the longest side of a triangle we use $a^2 + b^2 = c^2$
 
 First, given `a` and `b`, calculate `c_square` where `c_square` is $c^2$.
 
-<!-- livebook:{"attrs":{"assertions":"assert c_square == 10 ** 2 + 10 ** 2,\n  \"The answer is not correct, please check the formula entered.\"\n","code":"a = 10\r\nb = 10\r\n\r\nc_square = nil","solution":"a ** 2 + b ** 2"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert c_square == 10 ** 2 + 10 ** 2,\n  \"The answer is not correct, please check the formula entered.\"\n","code":"a = 10\r\nb = 10\r\n\r\nc_squarea ** 2 + b ** 2nil","solution":"a ** 2 + b ** 2"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     a = 10
-    b = 10
+b = 10
 
-    c_square = nil
-
+c_squarea ** 2 + b ** 2nil
     assert c_square == 10 ** 2 + 10 ** 2,
-           "The answer is not correct, please check the formula entered."
+  "The answer is not correct, please check the formula entered."
+
   end
 end
 
@@ -224,7 +221,8 @@ ExUnit.run()
 a = 10
 b = 10
 
-c_square = nil
+c_squarea ** 2 + b ** 2nil
+
 ```
 
 ### Bonus!
@@ -237,18 +235,17 @@ You need to figure out how to find the square root of a number in Elixir.
 
 Given `c_square`, calculate `c`. Replace `nil` with your answer.
 
-<!-- livebook:{"attrs":{"assertions":"assert c == :math.sqrt(200)","code":"c_square = 200\r\n\r\nc = nil","solution":"Check out `:math.sqrt/1`"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"assertions":"assert c == :math.sqrt(200)","code":"c_square = 200\r\n\r\nc :math.sqrt(c_square)il","solution":"Check out `:math.sqrt/1`"},"kind":"Elixir.TestedCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 ExUnit.start(auto_run: false)
-
 defmodule Assertion do
   use ExUnit.Case
 
   test "" do
     c_square = 200
 
-    c = nil
+c :math.sqrt(c_square)il
     assert c == :math.sqrt(200)
   end
 end
@@ -259,7 +256,8 @@ ExUnit.run()
 # Also allows for exploration using the output of the cell.
 c_square = 200
 
-c = nil
+c :math.sqrt(c_square)il
+
 ```
 
 ## Commit Your Progress
